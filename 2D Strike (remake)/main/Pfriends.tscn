@@ -1,0 +1,330 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=1]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=2]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=3]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=4]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=5]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=6]
+[ext_resource path="res://main/Pfriends.gd" type="Script" id=7]
+[ext_resource path="res://2ds sfx gfx/gfx/dialog.png" type="Texture" id=8]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsanslight-6dZo.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 81, 70, 241, 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 46
+outline_size = 3
+outline_color = Color( 0.54902, 0.54902, 0.54902, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2, 88, 156, 46 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( -0.153473, 240.859, 159.221, 45.1126 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( -2, 187, 163, 49 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 190.334, 158, 44.5835 )
+
+[node name="Pfriends" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 11.0
+margin_top = -230.0
+margin_right = -10.0
+margin_bottom = -224.0
+texture = SubResource( 5 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="temen" type="TextureRect" parent="TextureRect2"]
+margin_left = 20.0
+margin_top = 96.0
+margin_right = 370.0
+margin_bottom = 718.0
+rect_scale = Vector2( 0.839664, 0.390282 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect2/temen"]
+position = Vector2( 176.058, 309.618 )
+scale = Vector2( 1.86125, 5.56001 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="TextureRect2/temen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 29.7738
+margin_top = -25.6225
+margin_right = 29.7738
+margin_bottom = -25.6225
+rect_scale = Vector2( 0.819965, 1.09327 )
+custom_colors/font_color = Color( 0.486275, 0.486275, 0.486275, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "No friends :("
+align = 1
+valign = 1
+
+[node name="delete" type="TouchScreenButton" parent="TextureRect2/temen"]
+position = Vector2( -2.38191, 653.375 )
+scale = Vector2( 0.98912, 2.52184 )
+normal = SubResource( 8 )
+
+[node name="Label" type="Label" parent="TextureRect2/temen/delete"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Delete"
+align = 1
+valign = 1
+
+[node name="info" type="TouchScreenButton" parent="TextureRect2/temen"]
+position = Vector2( 198.889, 653.375 )
+scale = Vector2( 0.98912, 2.52184 )
+normal = SubResource( 8 )
+
+[node name="Label" type="Label" parent="TextureRect2/temen/info"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Info"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="TextureRect2/temen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 817.0
+margin_right = -179.0
+margin_bottom = 279.0
+rect_scale = Vector2( 1.31821, 2.53347 )
+custom_fonts/font = ExtResource( 3 )
+text = "Total friends: 0"
+valign = 1
+
+[node name="obrol" type="TextureRect" parent="TextureRect2"]
+margin_left = 344.0
+margin_top = 96.0
+margin_right = 694.0
+margin_bottom = 718.0
+rect_scale = Vector2( 1.83972, 0.382354 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect2/obrol"]
+position = Vector2( 174.575, 308.979 )
+scale = Vector2( 1.81874, 5.55018 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="TextureRect2/obrol"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -51.6114
+margin_top = -75.846
+margin_right = 194.389
+margin_bottom = -146.846
+rect_scale = Vector2( 0.423598, 1.38573 )
+custom_colors/font_color = Color( 0.486275, 0.486275, 0.486275, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "No message"
+align = 1
+valign = 1
+
+[node name="send" type="TouchScreenButton" parent="TextureRect2/obrol"]
+position = Vector2( 249.495, 653.375 )
+scale = Vector2( 0.630208, 3.4588 )
+normal = SubResource( 8 )
+
+[node name="Label" type="Label" parent="TextureRect2/obrol/send"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Send"
+align = 1
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect2/obrol"]
+margin_top = 646.0
+margin_right = 227.0
+margin_bottom = 681.0
+rect_scale = Vector2( 1.08134, 5.10316 )
+placeholder_text = "Enter your message..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="profile" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 11, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/profile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Profile"
+align = 1
+valign = 1
+
+[node name="friends" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 223, 8 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="HBoxContainer/friends"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Friends"
+align = 1
+valign = 1
+
+[node name="groups" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/groups"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Groups"
+align = 1
+valign = 1
+
+[node name="leaders" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 643, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/leaders"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Leaders"
+align = 1
+valign = 1
+
+[node name="news" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 847, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/news"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "News"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 536 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+pressed = SubResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="friendds" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -165, -27 )
+
+[node name="myfriends" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 71, 88 )
+scale = Vector2( 1.39735, 1.19536 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="friendds/myfriends"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "My friends"
+align = 1
+valign = 1
+
+[node name="frendreq" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 397, 89 )
+scale = Vector2( 1.47528, 1.26637 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="friendds/frendreq"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.819768, 0.819768 )
+custom_fonts/font = ExtResource( 3 )
+text = "Friends request"
+align = 1
+valign = 1
+
+[node name="findfrend" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 726, 89 )
+scale = Vector2( 1.47528, 1.26637 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="friendds/findfrend"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.819768, 0.819768 )
+custom_fonts/font = ExtResource( 3 )
+text = "Find friends"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="HBoxContainer/profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="HBoxContainer/groups" to="." method="_on_groups_pressed"]
+[connection signal="pressed" from="HBoxContainer/leaders" to="." method="_on_leaders_pressed"]
+[connection signal="pressed" from="HBoxContainer/news" to="." method="_on_news_pressed"]
+[connection signal="released" from="HBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="friendds/frendreq" to="." method="_on_frendreq_pressed"]
+[connection signal="pressed" from="friendds/findfrend" to="." method="_on_findfrend_pressed"]

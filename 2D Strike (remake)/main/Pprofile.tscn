@@ -1,0 +1,581 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=1]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=2]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=4]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=5]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=6]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=7]
+[ext_resource path="res://main/Pprofile.gd" type="Script" id=8]
+[ext_resource path="res://2ds sfx gfx/sprite_sheet/spin world.jpg" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 81, 70, 241, 6 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( -2, 187, 163, 49 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( -0.153473, 240.859, 159.221, 45.1126 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 190.334, 158, 44.5835 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 225.313, 38.615 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( -1, 43, 224, 38 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+outline_color = Color( 0.996078, 0.996078, 0.996078, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 36, 25, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 169, 25, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 302, 25, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 435, 25, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 36, 182, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 169, 182, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 302, 182, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 435, 182, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 36, 339, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 169, 339, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 302, 339, 133, 157 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 435, 339, 133, 157 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Pprofile" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -501.0
+margin_top = 70.0
+margin_right = 502.0
+margin_bottom = 76.0
+texture = SubResource( 5 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="profile" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 11, 8 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="HBoxContainer/profile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Profile"
+align = 1
+valign = 1
+
+[node name="friends" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 222, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/friends"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Friends"
+align = 1
+valign = 1
+
+[node name="groups" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/groups"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Groups"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="HBoxContainer/groups"]
+stream = ExtResource( 5 )
+
+[node name="leaders" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 643, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/leaders"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Leaders"
+align = 1
+valign = 1
+
+[node name="news" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 847, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/news"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "News"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 536 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+pressed = SubResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="isi" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="gantinama" type="TouchScreenButton" parent="isi"]
+position = Vector2( -87, -75 )
+scale = Vector2( 1.16889, 1.28947 )
+normal = SubResource( 7 )
+pressed = SubResource( 8 )
+
+[node name="Label" type="Label" parent="isi/gantinama"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Change nickname"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="isi/gantinama"]
+stream = ExtResource( 5 )
+
+[node name="akunmk" type="TouchScreenButton" parent="isi"]
+position = Vector2( -87, 94 )
+scale = Vector2( 1.16889, 1.28947 )
+normal = SubResource( 7 )
+pressed = SubResource( 8 )
+
+[node name="Label" type="Label" parent="isi/akunmk"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Sign in"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="isi/akunmk"]
+stream = ExtResource( 5 )
+
+[node name="hapusakun" type="TouchScreenButton" parent="isi"]
+position = Vector2( -87, 163 )
+scale = Vector2( 1.16889, 1.28947 )
+normal = SubResource( 7 )
+pressed = SubResource( 8 )
+
+[node name="Label" type="Label" parent="isi/hapusakun"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Delete account"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="isi/hapusakun"]
+stream = ExtResource( 5 )
+
+[node name="register" type="TouchScreenButton" parent="isi"]
+position = Vector2( 195, 94 )
+scale = Vector2( 1.16889, 1.28947 )
+normal = SubResource( 7 )
+pressed = SubResource( 8 )
+
+[node name="Label" type="Label" parent="isi/register"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Register"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="isi/register"]
+stream = ExtResource( 5 )
+
+[node name="nilai" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nama" type="Panel" parent="nilai"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -154.0
+margin_right = 169.0
+margin_bottom = -114.0
+
+[node name="Label" type="Label" parent="nilai/nama"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 9 )
+text = "Nickname:"
+
+[node name="id" type="Panel" parent="nilai"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -33.0
+margin_right = 145.0
+margin_bottom = 7.0
+
+[node name="Label" type="Label" parent="nilai/id"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 9 )
+text = "ID: N/A"
+
+[node name="akun" type="Panel" parent="nilai"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = 17.0
+margin_right = 145.0
+margin_bottom = 57.0
+
+[node name="Label" type="Label" parent="nilai/akun"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 9 )
+text = "Account:"
+
+[node name="popup" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 258.0
+margin_top = 150.0
+margin_right = -268.0
+margin_bottom = -122.0
+
+[node name="gnama" type="AcceptDialog" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.0
+margin_top = -185.0
+margin_right = -323.0
+margin_bottom = -117.0
+rect_scale = Vector2( 2.18438, 2.18438 )
+window_title = "Enter your nickname"
+
+[node name="LineEdit" type="LineEdit" parent="popup/gnama"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 171.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 0.917351 )
+
+[node name="npw" type="AcceptDialog" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -183.0
+margin_right = -321.0
+margin_bottom = -115.0
+rect_scale = Vector2( 2.18438, 2.18438 )
+window_title = "Enter new password"
+
+[node name="LineEdit" type="LineEdit" parent="popup/npw"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 171.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 0.917351 )
+secret = true
+
+[node name="signin" type="AcceptDialog" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -183.0
+margin_right = -321.0
+margin_bottom = -115.0
+rect_scale = Vector2( 2.18438, 2.18438 )
+window_title = "Sign in"
+
+[node name="LineEdit" type="LineEdit" parent="popup/signin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 171.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 0.917351 )
+
+[node name="regs" type="AcceptDialog" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.0
+margin_top = -185.0
+margin_right = -323.0
+margin_bottom = -117.0
+rect_scale = Vector2( 2.18438, 2.18438 )
+window_title = "Register"
+
+[node name="LineEdit" type="LineEdit" parent="popup/regs"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 171.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 0.917351 )
+
+[node name="sc" type="AcceptDialog" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.0
+margin_top = -185.0
+margin_right = -323.0
+margin_bottom = -117.0
+rect_scale = Vector2( 2.18438, 2.18438 )
+window_title = "Name Country"
+
+[node name="LineEdit" type="LineEdit" parent="popup/sc"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 171.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 0.917351 )
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="karakter" type="Panel" parent="."]
+margin_left = 46.0
+margin_top = 375.0
+margin_right = 205.0
+margin_bottom = 570.0
+rect_scale = Vector2( 1.01052, 1.0317 )
+
+[node name="world" type="AnimatedSprite" parent="karakter"]
+position = Vector2( 79.6619, 75.6034 )
+scale = Vector2( 1.18304, 1 )
+frames = SubResource( 22 )
+
+[node name="Button" type="Button" parent="karakter"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 3.95836
+margin_top = -35.0698
+margin_right = 107.958
+margin_bottom = -15.0698
+rect_scale = Vector2( 1.4579, 1.4579 )
+text = "Select Country"
+
+[node name="statistik" type="Control" parent="."]
+margin_top = -6.0
+margin_right = 40.0
+margin_bottom = 34.0
+
+[node name="skor" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 94.0
+margin_right = 139.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Score: 0"
+
+[node name="ek" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 130.0
+margin_right = 226.0
+margin_bottom = 161.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Enemies killed: 0"
+
+[node name="bk" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 170.0
+margin_right = 190.0
+margin_bottom = 201.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Bugs killed: 0"
+
+[node name="zk" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 210.0
+margin_right = 228.0
+margin_bottom = 241.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Zombies killed: 0"
+
+[node name="jk" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 248.0
+margin_right = 271.0
+margin_bottom = 279.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Juggernauts killed: 0"
+
+[node name="gk" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 291.0
+margin_right = 210.0
+margin_bottom = 322.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Ghosts killed: 0"
+
+[node name="d" type="Label" parent="statistik"]
+margin_left = 42.0
+margin_top = 329.0
+margin_right = 151.0
+margin_bottom = 360.0
+rect_scale = Vector2( 1.17291, 1.17291 )
+custom_fonts/font = ExtResource( 7 )
+text = "Deaths: 0"
+
+[connection signal="pressed" from="HBoxContainer/friends" to="." method="_on_friends_pressed"]
+[connection signal="pressed" from="HBoxContainer/groups" to="." method="_on_groups_pressed"]
+[connection signal="pressed" from="HBoxContainer/leaders" to="." method="_on_leaders_pressed"]
+[connection signal="pressed" from="HBoxContainer/news" to="." method="_on_news_pressed"]
+[connection signal="released" from="HBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="isi/gantinama" to="." method="_on_gantinama_pressed"]
+[connection signal="pressed" from="isi/akunmk" to="." method="_on_akunmk_pressed"]
+[connection signal="pressed" from="isi/hapusakun" to="." method="_on_hapusakun_pressed"]
+[connection signal="pressed" from="isi/register" to="." method="_on_register_pressed"]
+[connection signal="confirmed" from="popup/gnama" to="." method="_on_gnama_confirmed"]
+[connection signal="confirmed" from="popup/npw" to="." method="_on_npw_confirmed"]
+[connection signal="pressed" from="karakter/Button" to="." method="_on_Button_pressed"]

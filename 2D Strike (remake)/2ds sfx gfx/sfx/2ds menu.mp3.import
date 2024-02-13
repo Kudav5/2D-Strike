@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2ds menu.mp3-7d7e19384d08ff88224de144ac37b0c3.mp3str"
+
+[deps]
+
+source_file="res://2ds sfx gfx/sfx/2ds menu.mp3"
+dest_files=[ "res://.import/2ds menu.mp3-7d7e19384d08ff88224de144ac37b0c3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

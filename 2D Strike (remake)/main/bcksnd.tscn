@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2ds sfx gfx/sfx/2ds menu.mp3" type="AudioStream" id=1]
+[ext_resource path="res://main/bcksnd.gd" type="Script" id=2]
+
+[node name="bcksnd" type="Node"]
+script = ExtResource( 2 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

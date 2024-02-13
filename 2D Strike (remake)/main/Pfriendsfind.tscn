@@ -1,0 +1,388 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsanslight-6dZo.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=3]
+[ext_resource path="res://2ds sfx gfx/gfx/dialog.png" type="Texture" id=4]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=5]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=6]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=7]
+[ext_resource path="res://main/Pfriends.gd" type="Script" id=8]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+[ext_resource path="res://2ds sfx gfx/icon/id.png" type="Texture" id=11]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 81, 70, 241, 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 46
+outline_size = 3
+outline_color = Color( 0.54902, 0.54902, 0.54902, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 2, 241, 155, 44 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 2, 189, 155, 44 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( -0.153473, 240.859, 159.221, 45.1126 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( -2, 187, 163, 49 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 190.334, 158, 44.5835 )
+
+[node name="Pfriendsfind" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 11.0
+margin_top = -230.0
+margin_right = -10.0
+margin_bottom = -224.0
+texture = SubResource( 5 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="obrol" type="TextureRect" parent="TextureRect2"]
+margin_left = 344.0
+margin_top = 159.0
+margin_right = 694.0
+margin_bottom = 781.0
+rect_scale = Vector2( 1.83972, 0.382354 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect2/obrol"]
+position = Vector2( 174.575, 308.979 )
+scale = Vector2( 1.81874, 5.55018 )
+texture = ExtResource( 4 )
+
+[node name="linedit" type="LineEdit" parent="TextureRect2/obrol"]
+visible = false
+margin_left = 2.0
+margin_top = 31.3845
+margin_right = 276.0
+margin_bottom = 55.3845
+rect_scale = Vector2( 1.25581, 6.51707 )
+editable = false
+expand_to_text_length = true
+
+[node name="hpg" type="MenuButton" parent="TextureRect2/obrol/linedit"]
+visible = false
+margin_left = 1.0
+margin_top = -0.401314
+margin_right = 116.0
+margin_bottom = 19.5987
+rect_scale = Vector2( 0.988764, 1.08326 )
+text = "HongProGaming"
+items = [ "Created: 31/08/2023", ExtResource( 10 ), 0, false, false, 0, 0, null, "", false ]
+
+[node name="Label" type="Label" parent="TextureRect2/obrol/linedit/hpg"]
+margin_left = 6.57082
+margin_top = 2.96373
+margin_right = 268.571
+margin_bottom = 16.9637
+text = "        12098           Today 6 AM"
+align = 2
+
+[node name="pi" type="MenuButton" parent="TextureRect2/obrol/linedit"]
+visible = false
+margin_left = 1.0
+margin_top = -0.401314
+margin_right = 116.0
+margin_bottom = 19.5987
+rect_scale = Vector2( 0.988764, 1.08326 )
+focus_mode = 2
+text = "ProIndo"
+align = 0
+items = [ "Created: 29/08/2023", ExtResource( 11 ), 0, false, false, 0, 0, null, "", false ]
+
+[node name="Label" type="Label" parent="TextureRect2/obrol/linedit/pi"]
+margin_left = 6.57082
+margin_top = 2.96373
+margin_right = 268.571
+margin_bottom = 16.9637
+text = "        70026            Online"
+align = 2
+
+[node name="nothing" type="Label" parent="TextureRect2/obrol"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -51.6114
+margin_top = -75.846
+margin_right = 194.389
+margin_bottom = -146.846
+rect_scale = Vector2( 0.423598, 1.38573 )
+custom_colors/font_color = Color( 0.486275, 0.486275, 0.486275, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Nothing found..."
+align = 1
+valign = 1
+
+[node name="nn" type="Sprite" parent="TextureRect2/obrol"]
+self_modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+position = Vector2( -170.678, 96.7689 )
+scale = Vector2( 0.76452, 1.39391 )
+texture = ExtResource( 4 )
+offset = Vector2( 88.4212, 1.93372 )
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect2/obrol/nn"]
+margin_left = -7.0
+margin_top = -47.0
+margin_right = 110.0
+margin_bottom = -23.0
+rect_scale = Vector2( 1.61292, 4.016 )
+placeholder_text = "Enter nickname..."
+
+[node name="id" type="Sprite" parent="TextureRect2/obrol"]
+self_modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+position = Vector2( -170.678, 523.076 )
+scale = Vector2( 0.76452, 1.39391 )
+texture = ExtResource( 4 )
+offset = Vector2( 88.4212, 1.93372 )
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect2/obrol/id"]
+margin_left = -7.0
+margin_top = -47.0
+margin_right = 110.0
+margin_bottom = -23.0
+rect_scale = Vector2( 1.61292, 4.016 )
+placeholder_text = "Enter ID..."
+
+[node name="find" type="TouchScreenButton" parent="TextureRect2/obrol"]
+position = Vector2( -153.284, 653.375 )
+scale = Vector2( 0.630208, 3.4588 )
+normal = SubResource( 8 )
+pressed = SubResource( 9 )
+
+[node name="Label" type="Label" parent="TextureRect2/obrol/find"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Find"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="TextureRect2/obrol"]
+margin_left = -181.006
+margin_top = -104.615
+margin_right = -38.0058
+margin_bottom = -90.6151
+rect_scale = Vector2( 1.12884, 7.4871 )
+text = "Search by nickname...."
+
+[node name="Label3" type="Label" parent="TextureRect2/obrol"]
+margin_left = -181.006
+margin_top = 313.845
+margin_right = -38.0058
+margin_bottom = 327.845
+rect_scale = Vector2( 1.12884, 7.4871 )
+text = "Search by ID...."
+
+[node name="Label4" type="Label" parent="TextureRect2/obrol"]
+margin_left = 8.69696
+margin_top = -128.153
+margin_right = 151.697
+margin_bottom = -114.153
+rect_scale = Vector2( 1.12884, 7.4871 )
+text = "Nickname"
+
+[node name="Label5" type="Label" parent="TextureRect2/obrol"]
+margin_left = 187.529
+margin_top = -112.461
+margin_right = 330.529
+margin_bottom = -98.4612
+rect_scale = Vector2( 1.12884, 7.4871 )
+text = "ID"
+
+[node name="Label6" type="Label" parent="TextureRect2/obrol"]
+margin_left = 269.063
+margin_top = -112.461
+margin_right = 412.063
+margin_bottom = -98.4612
+rect_scale = Vector2( 1.12884, 7.4871 )
+text = "Was on..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="profile" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 11, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/profile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Profile"
+align = 1
+valign = 1
+
+[node name="friends" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 223, 8 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="HBoxContainer/friends"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Friends"
+align = 1
+valign = 1
+
+[node name="groups" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/groups"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Groups"
+align = 1
+valign = 1
+
+[node name="leaders" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 643, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/leaders"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Leaders"
+align = 1
+valign = 1
+
+[node name="news" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 847, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/news"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "News"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 536 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+pressed = SubResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="friendds" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -165, -27 )
+
+[node name="myfriend" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 71, 89 )
+scale = Vector2( 1.47528, 1.26637 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="friendds/myfriend"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.819768, 0.819768 )
+custom_fonts/font = ExtResource( 9 )
+text = "My friends"
+align = 1
+valign = 1
+
+[node name="frendreq" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 396, 89 )
+scale = Vector2( 1.47528, 1.26637 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="friendds/frendreq"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.819768, 0.819768 )
+custom_fonts/font = ExtResource( 9 )
+text = "Friends request"
+align = 1
+valign = 1
+
+[node name="findfrend" type="TouchScreenButton" parent="friendds"]
+position = Vector2( 728, 88 )
+scale = Vector2( 1.39735, 1.19536 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="friendds/findfrend"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.72513
+margin_right = 19.7251
+rect_scale = Vector2( 0.875926, 0.969184 )
+custom_fonts/font = ExtResource( 9 )
+text = "Find friends"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="pressed" from="TextureRect2/obrol/find" to="." method="_on_find_pressed"]
+[connection signal="pressed" from="HBoxContainer/profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="HBoxContainer/groups" to="." method="_on_groups_pressed"]
+[connection signal="pressed" from="HBoxContainer/leaders" to="." method="_on_leaders_pressed"]
+[connection signal="pressed" from="HBoxContainer/news" to="." method="_on_news_pressed"]
+[connection signal="released" from="HBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="friendds/myfriend" to="." method="_on_myfriend_pressed"]
+[connection signal="pressed" from="friendds/frendreq" to="." method="_on_frendreq_pressed"]

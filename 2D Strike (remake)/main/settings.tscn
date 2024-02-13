@@ -1,0 +1,252 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=2]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=3]
+[ext_resource path="res://main/settings.gd" type="Script" id=5]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_right = 2.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="intfc" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 31.0001, -43 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/intfc"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Interface Setting"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 382, -44 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="privasi" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 726, -44 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/privasi"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Privacy Policy"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_right = 40.0
+
+[node name="timer" type="TouchScreenButton" parent="VBoxContainer/Control"]
+position = Vector2( 699, -459 )
+scale = Vector2( 0.853542, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/timer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.4612
+margin_top = 2.0
+margin_right = -113.539
+margin_bottom = -10.0
+rect_scale = Vector2( 2.12208, 1.3627 )
+custom_fonts/font = SubResource( 3 )
+text = "5:30"
+align = 1
+valign = 1
+
+[node name="plus" type="TouchScreenButton" parent="VBoxContainer/Control"]
+position = Vector2( 911, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/plus"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="minus" type="TouchScreenButton" parent="VBoxContainer/Control"]
+position = Vector2( 599, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/minus"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="ceklis" type="Control" parent="."]
+margin_left = 17.0
+margin_top = 57.0
+margin_right = 57.0
+margin_bottom = 97.0
+rect_scale = Vector2( 2.51924, 2.51924 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sound" type="CheckBox" parent="ceklis"]
+margin_top = -9.12972
+margin_right = 24.0
+margin_bottom = 14.8703
+pressed = true
+
+[node name="Label" type="Label" parent="ceklis/sound"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Sound"
+
+[node name="friendly" type="CheckBox" parent="ceklis"]
+margin_top = 20.2442
+margin_right = 24.0
+margin_bottom = 44.2442
+
+[node name="Label" type="Label" parent="ceklis/friendly"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Friendly fire"
+
+[node name="camcenter" type="CheckBox" parent="ceklis"]
+margin_top = 51.0
+margin_right = 24.0
+margin_bottom = 75.0
+pressed = true
+
+[node name="Label" type="Label" parent="ceklis/camcenter"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Camera by center"
+
+[node name="weapon" type="CheckBox" parent="ceklis"]
+margin_top = 81.0
+margin_right = 24.0
+margin_bottom = 105.0
+
+[node name="Label" type="Label" parent="ceklis/weapon"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Weapons on the map at the start
+of the round"
+
+[node name="autobalance" type="CheckBox" parent="ceklis"]
+margin_top = 118.289
+margin_right = 188.0
+margin_bottom = 142.289
+
+[node name="Label" type="Label" parent="ceklis/autobalance"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Autobalance (multiplayer"
+
+[node name="deny" type="CheckBox" parent="ceklis"]
+margin_top = 146.473
+margin_right = 24.0
+margin_bottom = 170.473
+
+[node name="Label" type="Label" parent="ceklis/deny"]
+margin_left = 29.0
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+text = "Deny add to groups"
+
+[connection signal="released" from="VBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="VBoxContainer/Control/plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control/minus" to="." method="_on_minus_pressed"]

@@ -1,0 +1,286 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=1]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=3]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=4]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://main/singlegame.gd" type="Script" id=6]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 5 )
+
+[node name="singlegame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 10, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="pw" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 287, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/pw"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Password"
+align = 1
+valign = 1
+
+[node name="opsi" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 575, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/opsi"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Options"
+align = 1
+valign = 1
+
+[node name="play" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 833, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Play!"
+align = 1
+valign = 1
+
+[node name="custom" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 704, -515 )
+scale = Vector2( 1.40455, 2.19475 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/custom"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -33.0
+margin_bottom = 14.0
+rect_scale = Vector2( 1.18458, 0.697557 )
+custom_fonts/font = SubResource( 3 )
+text = "Local
+custom maps"
+align = 1
+valign = 1
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="detilplay" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="selek" type="Label" parent="detilplay"]
+margin_left = 28.0
+margin_top = 58.0
+margin_right = 158.0
+margin_bottom = 89.0
+rect_scale = Vector2( 1.59221, 1.59221 )
+custom_fonts/font = ExtResource( 7 )
+text = "Select map:"
+
+[node name="tipe" type="Label" parent="detilplay"]
+margin_left = 28.0
+margin_top = 175.0
+margin_right = 154.0
+margin_bottom = 206.0
+rect_scale = Vector2( 1.59221, 1.59221 )
+custom_fonts/font = ExtResource( 7 )
+text = "Game type:"
+
+[node name="red" type="Label" parent="detilplay"]
+margin_left = 28.0
+margin_top = 301.0
+margin_right = 185.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.59221, 1.59221 )
+custom_fonts/font = ExtResource( 7 )
+text = "Red team bot:"
+
+[node name="blue" type="Label" parent="detilplay"]
+margin_left = 28.0
+margin_top = 411.0
+margin_right = 189.0
+margin_bottom = 442.0
+rect_scale = Vector2( 1.59221, 1.59221 )
+custom_fonts/font = ExtResource( 7 )
+text = "Blue team bot:"
+
+[node name="pilihan" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="iselek" type="Panel" parent="pilihan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 232.0
+margin_top = 57.0
+margin_right = 676.0
+margin_bottom = 114.0
+
+[node name="MenuButton" type="MenuButton" parent="pilihan/iselek"]
+margin_left = 3.0
+margin_top = 6.0
+margin_right = 40.0
+margin_bottom = 26.0
+rect_scale = Vector2( 2.17792, 2.17792 )
+text = "Armory room"
+items = [ "Armory room", null, 0, false, false, 0, 0, null, "", false, "Forest", null, 0, false, false, 1, 0, null, "", false, "Garden", null, 0, false, false, 2, 0, null, "", false, "Sands", null, 0, false, false, 3, 0, null, "", false, "Survival", null, 0, false, false, 4, 0, null, "", false, "Trenches", null, 0, false, false, 5, 0, null, "", false, "Military warehouses", null, 0, false, false, 6, 0, null, "", false, "Industrial zone", null, 0, false, false, 7, 0, null, "", false, "Factory", null, 0, false, false, 8, 0, null, "", false, "North", null, 0, false, false, 9, 0, null, "", false, "Mines", null, 0, false, false, 10, 0, null, "", false, "House", null, 0, false, false, 11, 0, null, "", false, "Labyrinth", null, 0, false, false, 12, 0, null, "", false, "Area-51", null, 0, false, false, 13, 0, null, "", false, "Military base", null, 0, false, false, 14, 0, null, "", false, "Building site", null, 0, false, false, 15, 0, null, "", false ]
+
+[node name="itipe" type="Panel" parent="pilihan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 236.0
+margin_top = 176.0
+margin_right = 995.0
+margin_bottom = 233.0
+
+[node name="MenuButton" type="MenuButton" parent="pilihan/itipe"]
+margin_left = 3.0
+margin_top = 6.0
+margin_right = 40.0
+margin_bottom = 26.0
+rect_scale = Vector2( 2.17792, 2.17792 )
+focus_mode = 2
+text = "Team game"
+items = [ "Team game", null, 0, false, false, 0, 0, null, "", false, "Team game - score", null, 0, false, false, 1, 0, null, "", false, "Free for all", null, 0, false, false, 2, 0, null, "", false, "Base defense", null, 0, false, false, 3, 0, null, "", false, "Capture the Flag", null, 0, false, false, 4, 0, null, "", false, "Bugs attack", null, 0, false, false, 5, 0, null, "", false, "Zombie - infection", null, 0, false, false, 6, 0, null, "", false, "Juggernaut", null, 0, false, false, 7, 0, null, "", false, "Bomb", null, 0, false, false, 8, 0, null, "", false, "Arms race", null, 0, false, false, 9, 0, null, "", false, "Ghost", null, 0, false, false, 10, 0, null, "", false, "Battle Royale", null, 0, false, false, 11, 0, null, "", false ]
+
+[node name="numr" type="Panel" parent="pilihan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 440.0
+margin_top = 299.0
+margin_right = 995.0
+margin_bottom = 356.0
+
+[node name="MenuButton" type="MenuButton" parent="pilihan/numr"]
+margin_left = 3.0
+margin_top = 6.0
+margin_right = 40.0
+margin_bottom = 26.0
+rect_scale = Vector2( 2.17792, 2.17792 )
+focus_mode = 2
+text = "Low"
+items = [ "Low", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Terminator", null, 0, false, false, 2, 0, null, "", false ]
+
+[node name="LineEdit" type="LineEdit" parent="pilihan/numr"]
+margin_left = -145.0
+margin_top = -2.99994
+margin_right = -86.9999
+margin_bottom = 21.0001
+rect_scale = Vector2( 2.192, 2.64309 )
+text = "10"
+align = 1
+max_length = 2
+
+[node name="numb" type="Panel" parent="pilihan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 440.0
+margin_top = 408.0
+margin_right = 995.0
+margin_bottom = 465.0
+
+[node name="MenuButton" type="MenuButton" parent="pilihan/numb"]
+margin_left = 3.0
+margin_top = 6.0
+margin_right = 40.0
+margin_bottom = 26.0
+rect_scale = Vector2( 2.17792, 2.17792 )
+focus_mode = 2
+text = "Low"
+items = [ "Low", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Terminator", null, 0, false, false, 2, 0, null, "", false ]
+
+[node name="LineEdit" type="LineEdit" parent="pilihan/numb"]
+margin_left = -145.0
+margin_top = -2.99994
+margin_right = -86.9999
+margin_bottom = 21.0001
+rect_scale = Vector2( 2.192, 2.64309 )
+text = "10"
+align = 1
+max_length = 2
+
+[connection signal="released" from="VBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="released" from="VBoxContainer/opsi" to="." method="_on_opsi_released"]
+[connection signal="released" from="VBoxContainer/play" to="." method="_on_play_released"]
+[connection signal="released" from="VBoxContainer/custom" to="." method="_on_custom_released"]

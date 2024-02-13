@@ -1,0 +1,158 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://entity/bklik.gd" type="Script" id=1]
+
+[node name="bklik" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.411
+anchor_top = 0.336
+anchor_right = 0.544
+anchor_bottom = 0.688
+margin_left = 0.135986
+margin_top = -26.6
+margin_right = -0.0560303
+margin_bottom = 7.19998
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+margin_left = 13.0
+margin_top = 30.0
+margin_right = 123.0
+margin_bottom = 65.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -116.5
+margin_right = 24.0
+margin_bottom = -102.5
+rect_scale = Vector2( 1.31217, 1.31217 )
+text = "Enter Code"
+
+[node name="tombol" type="Control" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="0" type="Button" parent="Panel/tombol"]
+margin_left = 1.0
+margin_top = 102.5
+margin_right = 21.0
+margin_bottom = 122.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "0"
+
+[node name="1" type="Button" parent="Panel/tombol"]
+margin_left = -40.0
+margin_top = 61.5
+margin_right = -20.0
+margin_bottom = 81.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "1"
+
+[node name="2" type="Button" parent="Panel/tombol"]
+margin_left = 2.0
+margin_top = 61.5
+margin_right = 22.0
+margin_bottom = 81.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "2"
+
+[node name="3" type="Button" parent="Panel/tombol"]
+margin_left = 45.0
+margin_top = 61.5
+margin_right = 65.0
+margin_bottom = 81.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "3"
+
+[node name="4" type="Button" parent="Panel/tombol"]
+margin_left = -41.0
+margin_top = 16.5
+margin_right = -21.0
+margin_bottom = 36.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "4"
+
+[node name="5" type="Button" parent="Panel/tombol"]
+margin_left = 1.0
+margin_top = 16.5
+margin_right = 21.0
+margin_bottom = 36.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "5"
+
+[node name="6" type="Button" parent="Panel/tombol"]
+margin_left = 45.0
+margin_top = 16.5
+margin_right = 65.0
+margin_bottom = 36.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "6"
+
+[node name="7" type="Button" parent="Panel/tombol"]
+margin_left = -42.0
+margin_top = -26.5
+margin_right = -22.0
+margin_bottom = -6.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "7"
+
+[node name="8" type="Button" parent="Panel/tombol"]
+margin_left = 1.0
+margin_top = -26.5
+margin_right = 21.0
+margin_bottom = -6.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "8"
+
+[node name="9" type="Button" parent="Panel/tombol"]
+margin_left = 45.0
+margin_top = -26.5
+margin_right = 65.0
+margin_bottom = -6.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "9"
+
+[node name="n" type="Button" parent="Panel/tombol"]
+margin_left = -43.0
+margin_top = 102.5
+margin_right = -21.0
+margin_bottom = 122.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "N"
+
+[node name="y" type="Button" parent="Panel/tombol"]
+margin_left = 45.0
+margin_top = 102.5
+margin_right = 65.0
+margin_bottom = 122.5
+rect_scale = Vector2( 1.63938, 1.63938 )
+text = "Y"
+
+[connection signal="pressed" from="Panel/tombol/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="Panel/tombol/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Panel/tombol/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="Panel/tombol/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Panel/tombol/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="Panel/tombol/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="Panel/tombol/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="Panel/tombol/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="Panel/tombol/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="Panel/tombol/9" to="." method="_on_9_pressed"]

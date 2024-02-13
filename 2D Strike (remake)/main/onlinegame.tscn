@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://main/onlinegame.gd" type="Script" id=1]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=3]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=4]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=5]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="onlinegame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -6.0
+margin_right = 40.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="wificreate" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 12, -349 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/wificreate"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Wi-Fi - Create game"
+align = 1
+valign = 1
+
+[node name="wificonnect" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 12, -260 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/wificonnect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Wi-Fi - Connect"
+align = 1
+valign = 1
+
+[node name="hostpot" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 12, -170 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/hostpot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Hotspot settings"
+align = 1
+valign = 1
+
+[node name="wifi" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 12, -78 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/wifi"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Wi-Fi settings"
+align = 1
+valign = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 449.0
+margin_top = -6.0
+margin_right = 489.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="onlinecreate" type="TouchScreenButton" parent="VBoxContainer2"]
+position = Vector2( 12, -349 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer2/onlinecreate"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Online - Create game"
+align = 1
+valign = 1
+
+[node name="onlinejoin" type="TouchScreenButton" parent="VBoxContainer2"]
+position = Vector2( 12, -260 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer2/onlinejoin"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Online - Connect"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer2"]
+position = Vector2( 12, -78 )
+scale = Vector2( 1.61538, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer2/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="released" from="VBoxContainer2/back" to="." method="_on_back_released"]

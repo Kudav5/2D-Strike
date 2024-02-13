@@ -1,0 +1,173 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsanslight-6dZo.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://main/customaps.gd" type="Script" id=4]
+[ext_resource path="res://2ds sfx gfx/gfx/dialog.png" type="Texture" id=5]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=6]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=7]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=8]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 46
+outline_size = 3
+outline_color = Color( 0.54902, 0.54902, 0.54902, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 90, 160, 40 )
+
+[node name="customaps" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_right = 2.0
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 382, -44 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="maps" type="TextureRect" parent="."]
+margin_left = 18.0
+margin_top = 68.0
+margin_right = 368.0
+margin_bottom = 690.0
+rect_scale = Vector2( 2.08666, 0.69464 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="maps"]
+position = Vector2( 174.575, 308.979 )
+scale = Vector2( 1.81874, 5.55018 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="maps"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -51.6114
+margin_top = -75.846
+margin_right = 194.389
+margin_bottom = -146.846
+rect_scale = Vector2( 0.423598, 1.38573 )
+custom_colors/font_color = Color( 0.486275, 0.486275, 0.486275, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "No custom maps..."
+align = 1
+valign = 1
+
+[node name="tombol" type="VBoxContainer" parent="."]
+margin_top = 21.0
+margin_right = 40.0
+margin_bottom = 61.0
+
+[node name="load" type="TouchScreenButton" parent="tombol"]
+position = Vector2( 762, 49 )
+scale = Vector2( 1.54065, 1.54065 )
+normal = SubResource( 8 )
+
+[node name="Label" type="Label" parent="tombol/load"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Load map"
+align = 1
+valign = 1
+
+[node name="delete" type="TouchScreenButton" parent="tombol"]
+position = Vector2( 762, 133 )
+scale = Vector2( 1.54065, 1.54065 )
+normal = SubResource( 8 )
+
+[node name="Label" type="Label" parent="tombol/delete"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Delete map"
+align = 1
+valign = 1
+
+[node name="detailmap" type="Control" parent="."]
+margin_top = -87.0
+margin_right = 40.0
+margin_bottom = -47.0
+
+[node name="map" type="Label" parent="detailmap"]
+margin_left = 20.0
+margin_top = 101.0
+margin_right = 70.0
+margin_bottom = 132.0
+rect_scale = Vector2( 1.32263, 1.32263 )
+custom_fonts/font = ExtResource( 1 )
+text = "Map"
+
+[node name="size" type="Label" parent="detailmap"]
+margin_left = 246.0
+margin_top = 101.0
+margin_right = 296.0
+margin_bottom = 132.0
+rect_scale = Vector2( 1.32263, 1.32263 )
+custom_fonts/font = ExtResource( 1 )
+text = "Size"
+
+[node name="updt" type="Label" parent="detailmap"]
+margin_left = 408.0
+margin_top = 101.0
+margin_right = 539.0
+margin_bottom = 132.0
+rect_scale = Vector2( 1.32263, 1.32263 )
+custom_fonts/font = ExtResource( 1 )
+text = "Last update"
+
+[connection signal="released" from="VBoxContainer/back" to="." method="_on_back_released"]

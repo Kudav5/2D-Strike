@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/player anm.png" type="Texture" id=1]
+[ext_resource path="res://entity/bluepistol.gd" type="Script" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/old deagle.wav" type="AudioStream" id=3]
+[ext_resource path="res://entity/GUI.tscn" type="PackedScene" id=4]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 952.646, 836.28, 56.5868, 67.7326 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1153, 517.957, 61, 75 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 22.0262, 24.4344 )
+
+[node name="bluepistol" type="KinematicBody2D"]
+z_index = 2
+script = ExtResource( 2 )
+
+[node name="knife" type="Sprite" parent="."]
+position = Vector2( 3.82796, 2.39322 )
+rotation = 1.559
+texture = SubResource( 3 )
+
+[node name="pistol" type="Sprite" parent="."]
+visible = false
+position = Vector2( 6, 0 )
+rotation = 1.57011
+texture = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.564589, 0.360111 )
+rotation = 1.56817
+shape = SubResource( 4 )
+
+[node name="deagle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]

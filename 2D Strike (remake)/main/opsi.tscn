@@ -1,0 +1,560 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://main/opsi.gd" type="Script" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=3]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=4]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=5]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=6]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=7]
+[ext_resource path="res://2ds sfx gfx/gfx/senjata.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1, 241, 156, 45 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 0, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 170, 0, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 255, 0, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 67, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 67, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 255, 67, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 134, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 134, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 170, 134, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 255, 134, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 340, 134, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 201, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 170, 201, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 268, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 268, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 170, 268, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 335, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 85, 335, 85, 67 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 170, 335, 85, 67 )
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 14.85, 189.15, 142.5, 44.65 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 6, 89, 152, 41 )
+
+[node name="opsi" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 40.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kurang" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 10, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/kurang"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "<"
+align = 1
+valign = 1
+
+[node name="sdfault" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 292, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/sdfault"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Set Default"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 578, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="lebih" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 826, -31 )
+scale = Vector2( 0.813636, 1.61538 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/lebih"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -109.0
+margin_bottom = -7.0
+rect_scale = Vector2( 1.97622, 1.16372 )
+custom_fonts/font = SubResource( 3 )
+text = ">"
+align = 1
+valign = 1
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="moneyy" type="Node2D" parent="."]
+position = Vector2( 798, 36 )
+scale = Vector2( 0.901071, 0.901071 )
+
+[node name="money" type="TouchScreenButton" parent="moneyy"]
+position = Vector2( -86.7317, 34.8568 )
+scale = Vector2( 0.853542, 1.69601 )
+normal = SubResource( 4 )
+pressed = SubResource( 5 )
+
+[node name="Label" type="Label" parent="moneyy/money"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.4612
+margin_top = 2.0
+margin_right = -113.539
+margin_bottom = -10.0
+rect_scale = Vector2( 2.12208, 1.3627 )
+custom_fonts/font = SubResource( 6 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="lebih" type="TouchScreenButton" parent="moneyy"]
+position = Vector2( 125.268, 32.8567 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 4 )
+pressed = SubResource( 5 )
+
+[node name="Label" type="Label" parent="moneyy/lebih"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 6 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="kurang" type="TouchScreenButton" parent="moneyy"]
+position = Vector2( -186.732, 32.8567 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 4 )
+pressed = SubResource( 5 )
+
+[node name="Label" type="Label" parent="moneyy/kurang"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 6 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="moneyy"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -86.5637
+margin_top = -16.6469
+margin_right = -5.56366
+margin_bottom = 14.3531
+rect_scale = Vector2( 1.62398, 1.62398 )
+custom_fonts/font = ExtResource( 7 )
+text = "Money:"
+
+[node name="weapon" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="slot1" type="Button" parent="weapon"]
+margin_left = 17.0
+margin_top = 111.0
+margin_right = 185.0
+margin_bottom = 162.0
+rect_scale = Vector2( 1.08835, 1.57319 )
+icon = SubResource( 7 )
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="weapon/slot1"]
+visible = false
+position = Vector2( 85.4136, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 16
+
+[node name="Label" type="Label" parent="weapon/slot1"]
+margin_left = 6.43175
+margin_top = -26.6973
+margin_right = 69.4317
+margin_bottom = 4.30266
+rect_scale = Vector2( 1.27746, 0.956416 )
+custom_fonts/font = ExtResource( 7 )
+text = "Slot-1:"
+
+[node name="Label2" type="Label" parent="weapon/slot1"]
+margin_left = 19.2952
+margin_top = 3.81391
+margin_right = 82.2953
+margin_bottom = 34.8139
+rect_scale = Vector2( 1.94908, 1.45925 )
+custom_fonts/font = ExtResource( 7 )
+text = "- - -"
+align = 1
+
+[node name="slot2" type="Button" parent="weapon"]
+margin_left = 228.0
+margin_top = 111.0
+margin_right = 396.0
+margin_bottom = 162.0
+rect_scale = Vector2( 1.08835, 1.57319 )
+icon = SubResource( 7 )
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="weapon/slot2"]
+position = Vector2( 85.4136, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 1
+
+[node name="Label" type="Label" parent="weapon/slot2"]
+margin_left = 6.43175
+margin_top = -26.6973
+margin_right = 69.4317
+margin_bottom = 4.30266
+rect_scale = Vector2( 1.27746, 0.956416 )
+custom_fonts/font = ExtResource( 7 )
+text = "Slot-2:"
+
+[node name="Label2" type="Label" parent="weapon/slot2"]
+visible = false
+margin_left = 19.2952
+margin_top = 3.81391
+margin_right = 82.2953
+margin_bottom = 34.8139
+rect_scale = Vector2( 1.94908, 1.45925 )
+custom_fonts/font = ExtResource( 7 )
+text = "- - -"
+align = 1
+
+[node name="slot3" type="Button" parent="weapon"]
+margin_left = 432.0
+margin_top = 111.0
+margin_right = 600.0
+margin_bottom = 162.0
+rect_scale = Vector2( 1.08835, 1.57319 )
+icon = SubResource( 7 )
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="weapon/slot3"]
+visible = false
+position = Vector2( 85.4136, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 16
+
+[node name="Label" type="Label" parent="weapon/slot3"]
+margin_left = 6.43175
+margin_top = -26.6973
+margin_right = 69.4317
+margin_bottom = 4.30266
+rect_scale = Vector2( 1.27746, 0.956416 )
+custom_fonts/font = ExtResource( 7 )
+text = "Slot-3:"
+
+[node name="Label2" type="Label" parent="weapon/slot3"]
+margin_left = 19.2952
+margin_top = 3.81391
+margin_right = 82.2953
+margin_bottom = 34.8139
+rect_scale = Vector2( 1.94908, 1.45925 )
+custom_fonts/font = ExtResource( 7 )
+text = "- - -"
+align = 1
+
+[node name="pilihwepon" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="pilihwepon"]
+margin_left = 24.0
+margin_top = 205.0
+margin_right = 222.0
+margin_bottom = 236.0
+rect_scale = Vector2( 1.47322, 1.47322 )
+custom_fonts/font = ExtResource( 7 )
+text = "Available weapon:"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 28, 273 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 1
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 28, 396 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton2"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 3
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 277, 273 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton3"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 4
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 277, 402 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton4"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 6
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 538, 273 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton5"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 5
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 801, 273 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton6"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 9
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 538, 403 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton7"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 11
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="pilihwepon"]
+position = Vector2( 801, 403 )
+scale = Vector2( 1.39084, 2.07083 )
+normal = SubResource( 29 )
+pressed = SubResource( 30 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pilihwepon/TouchScreenButton8"]
+position = Vector2( 68.3042, 25.3264 )
+scale = Vector2( 0.948759, 0.666089 )
+frames = SubResource( 28 )
+frame = 14
+
+[connection signal="released" from="VBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="moneyy/lebih" to="." method="_on_lebih_pressed"]
+[connection signal="pressed" from="moneyy/kurang" to="." method="_on_kurang_pressed"]

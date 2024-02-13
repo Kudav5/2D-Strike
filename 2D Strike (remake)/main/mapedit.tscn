@@ -1,0 +1,363 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://main/mapedit.gd" type="Script" id=1]
+[ext_resource path="res://fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=3]
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=4]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=5]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=6]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=7]
+[ext_resource path="res://2ds sfx gfx/gfx/tileset map.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 81, 70, 241, 6 )
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4, 0, 220.953, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1.73333, 44.8444, 223.267, 37.6541 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( -2, 187, 163, 49 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( -0.153473, 240.859, 159.221, 45.1126 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 656, 2, 127, 124 )
+
+[node name="mapedit" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_right = 2.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 11.0
+margin_top = -230.0
+margin_right = -10.0
+margin_bottom = -224.0
+texture = SubResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+
+[node name="back" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 382, -44 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="buatmap" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2( 654, -201 )
+scale = Vector2( 1.199, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/buatmap"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_right = -61.0
+margin_bottom = -10.0
+rect_scale = Vector2( 1.3916, 1.3916 )
+custom_fonts/font = SubResource( 3 )
+text = "Create map"
+align = 1
+valign = 1
+
+[node name="width" type="Node2D" parent="VBoxContainer"]
+position = Vector2( -408, 180 )
+scale = Vector2( 0.901071, 0.901071 )
+
+[node name="numw" type="TouchScreenButton" parent="VBoxContainer/width"]
+position = Vector2( 699, -459 )
+scale = Vector2( 0.853542, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/width/numw"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.4612
+margin_top = 2.0
+margin_right = -113.539
+margin_bottom = -10.0
+rect_scale = Vector2( 2.12208, 1.3627 )
+custom_fonts/font = SubResource( 3 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="plusw" type="TouchScreenButton" parent="VBoxContainer/width"]
+position = Vector2( 911, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/width/plusw"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="minusw" type="TouchScreenButton" parent="VBoxContainer/width"]
+position = Vector2( 599, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/width/minusw"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="height" type="Node2D" parent="VBoxContainer"]
+position = Vector2( -408, 259 )
+scale = Vector2( 0.901071, 0.901071 )
+
+[node name="numh" type="TouchScreenButton" parent="VBoxContainer/height"]
+position = Vector2( 699, -459 )
+scale = Vector2( 0.853542, 1.69601 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/height/numh"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.4612
+margin_top = 2.0
+margin_right = -113.539
+margin_bottom = -10.0
+rect_scale = Vector2( 2.12208, 1.3627 )
+custom_fonts/font = SubResource( 3 )
+text = "20"
+align = 1
+valign = 1
+
+[node name="plush" type="TouchScreenButton" parent="VBoxContainer/height"]
+position = Vector2( 911, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/height/plush"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="minush" type="TouchScreenButton" parent="VBoxContainer/height"]
+position = Vector2( 599, -461 )
+scale = Vector2( 0.377273, 1.80366 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/height/minush"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="width" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 331.0
+margin_right = 83.0
+margin_bottom = 362.0
+rect_scale = Vector2( 1.57486, 1.57486 )
+custom_fonts/font = ExtResource( 6 )
+text = "Width:"
+
+[node name="height" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 410.0
+margin_right = 92.0
+margin_bottom = 441.0
+rect_scale = Vector2( 1.37941, 1.37941 )
+custom_fonts/font = ExtResource( 6 )
+text = "Height:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="new" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 11, 8 )
+normal = SubResource( 5 )
+
+[node name="Label" type="Label" parent="HBoxContainer/new"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+text = "New map"
+align = 1
+valign = 1
+
+[node name="my" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 222, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/my"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+text = "My maps"
+align = 1
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 14.0
+margin_top = 182.0
+margin_right = 183.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2.72392, 2.72392 )
+placeholder_text = "Enter map name..."
+
+[node name="Label" type="Label" parent="LineEdit"]
+margin_left = 1.46847
+margin_top = -19.0902
+margin_right = 123.468
+margin_bottom = 11.9098
+rect_scale = Vector2( 0.535429, 0.535429 )
+custom_fonts/font = ExtResource( 6 )
+text = "Map name:"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 644, 266 )
+scale = Vector2( 1.28571, 1.28571 )
+texture = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -62.2222
+margin_top = -94.1111
+margin_right = 84.7778
+margin_bottom = -63.1111
+custom_fonts/font = ExtResource( 6 )
+text = "Main texture:"
+
+[node name="kurang" type="TouchScreenButton" parent="Sprite"]
+position = Vector2( 78.5555, -21.7777 )
+scale = Vector2( 0.264405, 1.26406 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite/kurang"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = "<<"
+align = 1
+valign = 1
+
+[node name="lebih" type="TouchScreenButton" parent="Sprite"]
+position = Vector2( 157.111, -21.7777 )
+scale = Vector2( 0.264405, 1.26406 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite/lebih"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = -183.0
+margin_bottom = -13.0
+rect_scale = Vector2( 6.41826, 1.47051 )
+custom_fonts/font = SubResource( 3 )
+text = ">>"
+align = 1
+valign = 1
+
+[connection signal="released" from="VBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="VBoxContainer/width/plusw" to="." method="_on_plusw_pressed"]
+[connection signal="pressed" from="VBoxContainer/width/minusw" to="." method="_on_minusw_pressed"]
+[connection signal="pressed" from="VBoxContainer/height/plush" to="." method="_on_plush_pressed"]
+[connection signal="pressed" from="VBoxContainer/height/minush" to="." method="_on_minush_pressed"]
+[connection signal="pressed" from="HBoxContainer/my" to="." method="_on_my_pressed"]

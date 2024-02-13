@@ -1,0 +1,223 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/tombol.png" type="Texture" id=1]
+[ext_resource path="res://2ds sfx gfx/gfx/wallpaper.jpg" type="Texture" id=2]
+[ext_resource path="res://main/main.tres" type="DynamicFont" id=3]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d open.wav" type="AudioStream" id=4]
+[ext_resource path="res://2ds sfx gfx/sfx/cs2d close.wav" type="AudioStream" id=5]
+[ext_resource path="res://BGcolor/white.jpg" type="Texture" id=6]
+[ext_resource path="res://main/Pnews.gd" type="Script" id=7]
+[ext_resource path="res://2ds sfx gfx/gfx/dialog.png" type="Texture" id=8]
+[ext_resource path="res://2ds sfx gfx/icon/small.png" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 81, 70, 241, 6 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( -0.153473, 240.859, 159.221, 45.1126 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( -2, 187, 163, 49 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 190.334, 158, 44.5835 )
+
+[node name="Pnews" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 11.0
+margin_top = -230.0
+margin_right = -10.0
+margin_bottom = -224.0
+texture = SubResource( 5 )
+stretch_mode = 1
+
+[node name="newshead" type="TextureRect" parent="TextureRect2"]
+margin_left = 20.0
+margin_top = 26.0
+margin_right = 370.0
+margin_bottom = 648.0
+rect_scale = Vector2( 0.862673, 0.657297 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect2/newshead"]
+position = Vector2( 176.058, 309.618 )
+scale = Vector2( 1.86125, 5.56001 )
+texture = ExtResource( 8 )
+
+[node name="Panel" type="Panel" parent="TextureRect2/newshead/Sprite"]
+margin_left = -88.0
+margin_top = -53.0
+margin_right = 85.0
+margin_bottom = -40.0
+
+[node name="Label" type="Label" parent="TextureRect2/newshead/Sprite/Panel"]
+margin_left = 4.61915
+margin_top = 0.59696
+margin_right = 96.6191
+margin_bottom = 14.597
+rect_scale = Vector2( 1.69618, 0.939339 )
+text = "28/08/2023"
+align = 1
+valign = 1
+
+[node name="newsbody" type="TextureRect" parent="TextureRect2"]
+margin_left = 344.0
+margin_top = 26.0
+margin_right = 694.0
+margin_bottom = 648.0
+rect_scale = Vector2( 1.83264, 0.653349 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect2/newsbody"]
+position = Vector2( 174.575, 308.979 )
+scale = Vector2( 1.81874, 5.55018 )
+texture = ExtResource( 8 )
+
+[node name="Panel" type="Panel" parent="TextureRect2/newsbody"]
+margin_left = 7.63927
+margin_top = 16.8363
+margin_right = 47.6393
+margin_bottom = 56.8363
+rect_scale = Vector2( 8.2453, 14.479 )
+
+[node name="Label" type="Label" parent="TextureRect2/newsbody/Panel"]
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 227.0
+margin_bottom = 162.0
+rect_scale = Vector2( 0.160696, 0.211158 )
+text = "Try remake 2D Strike
+Developer 2D Strike: Ivan QSchullz
+
+^-^
+
+By remake: ProIndo 
+Game Artist: Ivan QSchullz
+Music: Youtube
+"
+align = 1
+
+[node name="Sprite2" type="Sprite" parent="TextureRect2/newsbody"]
+position = Vector2( -96.0364, 414.786 )
+scale = Vector2( 1.98022, 5.41014 )
+texture = ExtResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="profile" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 11, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/profile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Profile"
+align = 1
+valign = 1
+
+[node name="groups" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/groups"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.91486
+margin_right = 1.91486
+custom_fonts/font = ExtResource( 3 )
+text = "Groups"
+align = 1
+valign = 1
+
+[node name="news" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 848, 8 )
+normal = SubResource( 3 )
+
+[node name="Label" type="Label" parent="HBoxContainer/news"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "News"
+align = 1
+valign = 1
+
+[node name="leaders" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 642, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/leaders"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Leaders"
+align = 1
+valign = 1
+
+[node name="back" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 432, 536 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+pressed = SubResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+
+[node name="friends" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2( 225, 9 )
+scale = Vector2( 1.04444, 1.04444 )
+normal = SubResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/friends"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Friends"
+align = 1
+valign = 1
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="HBoxContainer/profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="HBoxContainer/groups" to="." method="_on_groups_pressed"]
+[connection signal="pressed" from="HBoxContainer/leaders" to="." method="_on_leaders_pressed"]
+[connection signal="released" from="HBoxContainer/back" to="." method="_on_back_released"]
+[connection signal="pressed" from="HBoxContainer/friends" to="." method="_on_friends_pressed"]

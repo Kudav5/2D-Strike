@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/ammo.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 26.9461, 16.9505, 6.14423, 17.7098 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.5, 8 )
+
+[node name="ammo" type="StaticBody2D"]
+z_index = 1
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 2 )

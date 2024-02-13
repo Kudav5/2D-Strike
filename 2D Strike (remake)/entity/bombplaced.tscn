@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://2ds sfx gfx/gfx/tileset obj.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 598, 1041, 77, 41 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.5, 6 )
+
+[node name="bombplaced" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.358131, 0.358131 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 1 )
+shape = SubResource( 2 )

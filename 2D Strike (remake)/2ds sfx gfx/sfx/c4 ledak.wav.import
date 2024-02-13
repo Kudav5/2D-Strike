@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/c4 ledak.wav-4832b9918c82c5bda22c9fc9d8e021be.sample"
+
+[deps]
+
+source_file="res://2ds sfx gfx/sfx/c4 ledak.wav"
+dest_files=[ "res://.import/c4 ledak.wav-4832b9918c82c5bda22c9fc9d8e021be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
